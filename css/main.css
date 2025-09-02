@@ -1,3 +1,13 @@
+/*************************/
+/* CSS Custom Properties */
+/*************************/
+
+:root {
+    --color-secondary: #333; 
+}
+
+
+
 /******************/
 /* Type selectors */
 /******************/
@@ -6,9 +16,13 @@ body {
     text-align: center;
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 20px;
-    color: #333;
+    color: var(--color-secondary);
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -33,7 +47,7 @@ h1 {
 /*******************/
 
 .course-summary {
-    border: 1px solid #333;
+    border: 1px solid var(--color-secondary);
     border-radius: 10px;
     background-color: #eee;
     margin: 20px;
@@ -41,7 +55,7 @@ h1 {
 }
 
 .featured { /* also: .course-summary.featured */
-    background-color: #b1ccf8;
+    background-color: orage;
 }
 
 
@@ -55,3 +69,7 @@ h1 {
     max-height: 140px;
 }
 
+.course-summary img:hover {
+    box-shadow: 2px 2px 15px 2px var(--color-secondary);
+    transition: all 0.5s;
+}
